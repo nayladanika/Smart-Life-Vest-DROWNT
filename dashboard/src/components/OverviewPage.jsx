@@ -5,6 +5,7 @@ import LiveMap from './LiveMap';
 import MLDiagnostics from './MLDiagnostics';
 import TelemetryLog from './TelemetryLog';
 import SimulatorControls from './SimulatorControls';
+import PingerPanel from "./PingerPanel"; 
 
 export default function OverviewPage({
   telemetry,
