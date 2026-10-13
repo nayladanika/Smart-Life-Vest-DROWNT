@@ -48,6 +48,16 @@ export default function OverviewPage({
           onSetPresetLocation={onSetPresetLocation}
           theme={theme}
         />
+         {/* Beacon akustik: aktif saat RF tidak lagi bisa menembus air */}
+        <PingerPanel
+          telemetry={{
+            submerged: telemetry?.vit?.sub === 1,
+            loraOk: connectionState?.connected,
+            lat: telemetry?.gps?.lat,
+            lon: telemetry?.gps?.lng,
+            fixTime: Date.now(),
+          }
+           />
 
         {/* Right Column: ML Engine Breakdown & Real-Time Log */}
         <div className="overview-right-col">
